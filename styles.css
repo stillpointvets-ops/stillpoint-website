@@ -114,8 +114,8 @@ section.band.ink .lead-center{color:#C6C6CC}
 
 /* Feature row */
 .feature{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
-.feature .media{background:linear-gradient(160deg,var(--sand),var(--sand-deep));border-radius:var(--radius);min-height:320px;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow)}
-.feature .media img{width:60%;border-radius:50%}
+.feature .media{background:transparent;border-radius:0;min-height:0;display:flex;align-items:center;justify-content:center;box-shadow:none}
+.feature .media img{width:74%;max-width:300px;border-radius:50%}
 
 /* Trust strip */
 .trust{display:flex;flex-wrap:wrap;gap:18px 40px;justify-content:center;margin-top:20px;color:var(--muted);font-weight:600}
