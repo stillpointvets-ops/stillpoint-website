@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Stillpoint Veterans Foundation</title>
+<meta name="description" content="Get connected with holistic mental health care for veterans. Reach Stillpoint Veterans Foundation by form, phone, or email.">
+<link rel="icon" href="images/favicon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a class="brand" href="index.html">
+      <img src="images/logo-emblem.png" alt="Stillpoint Veterans Foundation logo">
+      <span>Stillpoint<small>Veterans Foundation</small></span>
+    </a>
+    <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    <nav class="nav-links" id="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">What We Do</a>
+      <a href="contact.html">Contact</a>
+      <a class="cta" href="contact.html">Get Connected</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" style="padding:60px 0 40px">
+  <div class="wrap">
+    <p class="eyebrow">Get Connected</p>
+    <h1>Reach out. We're here for you.</h1>
+    <p class="lead">Fill out the form and we'll get back to you, or call us directly. Everything you share is kept private.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap contact-grid">
+    <div>
+      <h2>Send us a message</h2>
+      <!-- FORMSPREE: connected to Stillpoint's form endpoint -->
+      <form action="https://formspree.io/f/xnjejylo" method="POST">
+        <div class="form-field">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-field">
+          <label for="phone">Phone (optional)</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+        <div class="form-field">
+          <label for="role">I am a&hellip;</label>
+          <select id="role" name="role">
+            <option>Veteran</option>
+            <option>Family member of a veteran</option>
+            <option>Mental health provider</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="message">How can we help?</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <input type="hidden" name="_subject" value="New message from Stillpoint website">
+        <button class="btn" type="submit">Send Message</button>
+        <p class="note" style="margin-top:14px">We'll never share your information. Expect a reply within a few days.</p>
+      </form>
+    </div>
+
+    <div>
+      <h2>Other ways to reach us</h2>
+      <ul class="contact-info">
+        <li>
+          <span class="ic">&#128222;</span>
+          <span><b>Call or text</b><a href="tel:+15742743714">(574) 274-3714</a></span>
+        </li>
+        <li>
+          <span class="ic">&#9993;&#65039;</span>
+          <span><b>Email</b><a href="mailto:stillpointvets@gmail.com">stillpointvets@gmail.com</a></span>
+        </li>
+        <li>
+          <span class="ic">&#128236;</span>
+          <span><b>Mail</b>PO Box 122<br>South Bend, IN 46624</span>
+        </li>
+      </ul>
+
+      <div class="disclaimer" style="border-radius:14px;text-align:left;margin-top:16px">
+        <b>In crisis?</b> Call the Veterans Crisis Line: dial <b>988, then press 1</b>, or text <b>838255</b>. Available 24/7.
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div>
+      <div class="fbrand"><img src="images/logo-emblem-white.png" alt=""> Stillpoint Veterans Foundation</div>
+      <p class="note" style="max-width:34ch;color:#b7a994">Connecting veterans with holistic mental health care in their community.</p>
+    </div>
+    <div class="cols">
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">What We Do</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Reach us</h4>
+        <ul>
+          <li><a href="tel:+15742743714">(574) 274-3714</a></li>
+          <li><a href="mailto:stillpointvets@gmail.com">stillpointvets@gmail.com</a></li>
+          <li>PO Box 122<br>South Bend, IN 46624</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">&copy; 2026 Stillpoint Veterans Foundation. &nbsp;501(c)(3) status pending.</div>
+  </div>
+</footer>
+
+</body>
+</html>
