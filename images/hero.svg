@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A veteran standing at sunrise looking toward the horizon">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2B1E1C"/>
+      <stop offset="0.38" stop-color="#7A2E28"/>
+      <stop offset="0.62" stop-color="#B4232C"/>
+      <stop offset="0.80" stop-color="#D98A4E"/>
+      <stop offset="1" stop-color="#F3D9A8"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#FDEFC9"/>
+      <stop offset="0.45" stop-color="#F6C878"/>
+      <stop offset="1" stop-color="#F6C878" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hill1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8A4A32"/>
+      <stop offset="1" stop-color="#6E3826"/>
+    </linearGradient>
+    <linearGradient id="hill2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5A2E22"/>
+      <stop offset="1" stop-color="#41211A"/>
+    </linearGradient>
+    <linearGradient id="hill3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#301A16"/>
+      <stop offset="1" stop-color="#241210"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#sky)"/>
+
+  <circle cx="820" cy="470" r="360" fill="url(#sun)"/>
+  <circle cx="820" cy="470" r="132" fill="#FDEFC9" opacity="0.92"/>
+
+  <g opacity="0.16" fill="#2B1E1C">
+    <path d="M760 470 C 770 300, 800 240, 815 150 C 828 235, 858 305, 872 470 Z"/>
+    <path d="M815 300 C 760 250, 700 250, 660 270 C 720 300, 770 330, 815 360 Z"/>
+    <path d="M815 300 C 872 250, 936 250, 976 272 C 912 302, 862 332, 815 360 Z"/>
+    <path d="M815 380 C 772 345, 720 345, 686 362 C 740 388, 780 408, 815 428 Z"/>
+    <path d="M815 380 C 860 345, 912 345, 946 364 C 892 390, 852 408, 815 428 Z"/>
+  </g>
+
+  <path d="M0 640 C 260 590, 520 612, 820 596 C 1120 582, 1380 606, 1600 578 L1600 900 L0 900 Z" fill="url(#hill1)" opacity="0.55"/>
+  <path d="M0 712 C 300 666, 640 700, 980 686 C 1240 676, 1440 700, 1600 684 L1600 900 L0 900 Z" fill="url(#hill2)" opacity="0.8"/>
+
+  <g fill="#1B0E0C">
+    <ellipse cx="815" cy="838" rx="120" ry="16" opacity="0.5"/>
+    <path d="M804 566
+      c-3 -9 -1 -19 6 -25 c-9 -5 -14 -16 -12 -26 c2 -13 14 -22 27 -21 c13 1 23 12 22 25 c-1 8 -5 14 -11 18
+      c8 5 12 15 10 24
+      l7 3 c6 2 10 8 10 15 l0 92 c0 5 -3 9 -8 10 l-4 84 c0 6 -5 10 -11 10 c-6 0 -11 -5 -11 -11 l-2 -70 l-6 0 l-2 70
+      c0 6 -5 11 -11 11 c-6 0 -11 -4 -11 -10 l-4 -84 c-5 -1 -8 -5 -8 -10 l0 -92 c0 -7 4 -13 10 -15 Z"/>
+  </g>
+
+  <path d="M0 800 C 360 772, 760 806, 1120 792 C 1340 784, 1480 800, 1600 790 L1600 900 L0 900 Z" fill="url(#hill3)"/>
+</svg>
