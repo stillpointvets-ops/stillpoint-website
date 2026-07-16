@@ -1,15 +1,17 @@
 /* Stillpoint Veterans Foundation — site styles */
 :root{
-  --red:#B4232C;
+  --red:#C7303A;
   --red-bright:#E1251B;
   --charcoal:#45454A;
-  --ink:#262629;
-  --cream:#FFFFFF;
-  --sand:#F4F4F5;
-  --sand-deep:#E3E3E6;
+  --ink:#1E1E22;
+  --cream:#2A2A2F;
+  --sand:#232327;
+  --sand-deep:#3C3C43;
+  --panel:#34343B;
   --tan:#C79A54;
-  --tan-ink:#8A5A22;
-  --muted:#5E5E66;
+  --tan-ink:#D8B96E;
+  --text:#ECECEE;
+  --muted:#A7A7B0;
   --white:#ffffff;
   --shadow:0 10px 30px rgba(36,31,28,.10);
   --radius:14px;
@@ -20,16 +22,16 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
-  margin:0;font-family:var(--font);color:var(--ink);
+  margin:0;font-family:var(--font);color:var(--text);
   background:var(--cream);line-height:1.65;font-size:18px;
   -webkit-font-smoothing:antialiased;
 }
-h1,h2,h3{font-family:var(--serif);line-height:1.2;color:var(--ink);font-weight:700}
+h1,h2,h3{font-family:var(--serif);line-height:1.2;color:var(--text);font-weight:700}
 h1{font-size:clamp(2rem,5vw,3.1rem);margin:.2em 0}
 h2{font-size:clamp(1.6rem,3.5vw,2.3rem);margin:0 0 .4em}
 h3{font-size:1.25rem;margin:0 0 .3em}
 p{margin:0 0 1.1em}
-a{color:var(--charcoal);text-decoration:none}
+a{color:var(--text);text-decoration:none}
 a:hover{text-decoration:underline}
 img{max-width:100%;display:block}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
@@ -44,26 +46,26 @@ img{max-width:100%;display:block}
 }
 .btn:hover{background:var(--red-bright);text-decoration:none;transform:translateY(-2px)}
 .btn-outline{
-  background:transparent;color:var(--ink);border:2px solid var(--ink);
+  background:transparent;color:#fff;border:2px solid #fff;
   box-shadow:none;padding:13px 28px;
 }
-.btn-outline:hover{background:var(--ink);color:#fff}
+.btn-outline:hover{background:#fff;color:var(--ink)}
 
 /* Header / nav */
 header.site{
-  position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);
+  position:sticky;top:0;z-index:50;background:rgba(30,30,34,.9);
   backdrop-filter:saturate(160%) blur(8px);border-bottom:1px solid var(--sand-deep);
 }
 .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 22px;max-width:var(--maxw);margin:0 auto}
-.brand{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-weight:700;font-size:1.15rem;color:var(--ink)}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-weight:700;font-size:1.15rem;color:var(--text)}
 .brand:hover{text-decoration:none}
 .brand img{width:46px;height:46px;border-radius:50%}
 .brand small{display:block;font-family:var(--font);font-weight:700;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--tan-ink)}
 .nav-links{display:flex;align-items:center;gap:26px}
-.nav-links a{color:var(--ink);font-weight:600;font-size:1rem}
+.nav-links a{color:var(--text);font-weight:600;font-size:1rem}
 .nav-links a.cta{background:var(--red);color:#fff;padding:9px 20px;border-radius:50px}
 .nav-links a.cta:hover{background:var(--red-bright);text-decoration:none}
-.menu-btn{display:none;background:none;border:none;font-size:1.7rem;color:var(--ink);cursor:pointer}
+.menu-btn{display:none;background:none;border:none;font-size:1.7rem;color:var(--text);cursor:pointer}
 
 /* Hero */
 .hero{
@@ -103,14 +105,14 @@ section.band.ink .lead-center{color:#C6C6CC}
 
 /* Cards */
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;margin-top:38px}
-.card{background:#fff;border-radius:var(--radius);padding:30px 26px;box-shadow:var(--shadow);border:1px solid var(--sand-deep)}
-.card .ic{width:52px;height:52px;border-radius:12px;background:var(--sand);display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:1.5rem}
+.card{background:var(--panel);border-radius:var(--radius);padding:30px 26px;box-shadow:var(--shadow);border:1px solid var(--sand-deep)}
+.card .ic{width:52px;height:52px;border-radius:12px;background:#26262B;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:1.5rem}
 .card p:last-child{margin-bottom:0}
 
 /* Steps */
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px;margin-top:40px;counter-reset:step}
 .step{position:relative;padding-left:8px}
-.step .num{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:var(--charcoal);color:#fff;font-family:var(--serif);font-weight:700;font-size:1.2rem;margin-bottom:12px}
+.step .num{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:#4E4E57;color:#fff;font-family:var(--serif);font-weight:700;font-size:1.2rem;margin-bottom:12px}
 
 /* Feature row */
 .feature{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
@@ -120,7 +122,7 @@ section.band.ink .lead-center{color:#C6C6CC}
 /* Trust strip */
 .trust{display:flex;flex-wrap:wrap;gap:18px 40px;justify-content:center;margin-top:20px;color:var(--muted);font-weight:600}
 .trust span{display:flex;align-items:center;gap:8px}
-.trust .dot{color:var(--charcoal);font-size:1.2rem}
+.trust .dot{color:var(--tan);font-size:1.2rem}
 
 /* Contact */
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
@@ -128,9 +130,10 @@ section.band.ink .lead-center{color:#C6C6CC}
 .form-field label{display:block;font-weight:600;margin-bottom:6px;font-size:.95rem}
 .form-field input,.form-field textarea,.form-field select{
   width:100%;padding:13px 15px;border:1.5px solid var(--sand-deep);border-radius:10px;
-  font-size:1rem;font-family:inherit;background:#fff;color:var(--ink);
+  font-size:1rem;font-family:inherit;background:var(--panel);color:var(--text);
 }
-.form-field input:focus,.form-field textarea:focus,.form-field select:focus{outline:none;border-color:var(--charcoal)}
+.form-field input::placeholder,.form-field textarea::placeholder{color:#8A8A93}
+.form-field input:focus,.form-field textarea:focus,.form-field select:focus{outline:none;border-color:#7A7A84}
 .form-field textarea{min-height:130px;resize:vertical}
 .contact-info li{list-style:none;display:flex;gap:14px;align-items:flex-start;margin-bottom:22px}
 .contact-info{padding:0;margin:0}
@@ -151,8 +154,8 @@ footer.site li{margin-bottom:7px}
 .copyright{border-top:1px solid rgba(255,255,255,.12);margin-top:30px;padding-top:18px;font-size:.85rem;color:#9A9AA0;text-align:center;width:100%}
 
 /* Disclaimer band */
-.disclaimer{background:var(--sand-deep);color:var(--ink);text-align:center;padding:16px 22px;font-size:.92rem}
-.disclaimer b{color:var(--red)}
+.disclaimer{background:#1A1A1E;color:var(--text);text-align:center;padding:16px 22px;font-size:.92rem;border-top:1px solid var(--sand-deep);border-bottom:1px solid var(--sand-deep)}
+.disclaimer b{color:#FF5A5F}
 
 /* Mobile */
 @media(max-width:820px){
