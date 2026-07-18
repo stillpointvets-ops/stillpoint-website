@@ -163,6 +163,23 @@ footer.site li{margin-bottom:7px}
 .event-body .btn{margin-top:6px}
 @media(max-width:560px){.event-card{flex-direction:column;gap:14px}.event-date{width:auto;display:inline-block;padding:8px 16px}}
 
+/* Calendar */
+.calendar{max-width:360px;margin:30px auto 6px;background:#fff;border:1px solid var(--sand-deep);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.cal-head{display:flex;align-items:center;justify-content:space-between;background:var(--blue);color:#fff;padding:12px 14px}
+.cal-title{font-family:var(--display);font-size:1.5rem;letter-spacing:.05em;text-transform:uppercase}
+.cal-nav{background:rgba(255,255,255,.18);border:none;color:#fff;width:34px;height:34px;border-radius:50%;font-size:1.4rem;cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center;padding:0;transition:background .15s ease}
+.cal-nav:hover{background:rgba(255,255,255,.34)}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);text-align:center}
+.cal-dow{padding:10px 8px 4px;font-size:.7rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+#calDays{padding:4px 8px 12px}
+.cal-day{padding:8px 0;font-size:.92rem;color:var(--ink);position:relative}
+.cal-day.muted{color:#C3CCD6}
+.cal-day.today{background:var(--sand);border-radius:8px;font-weight:700}
+.cal-day.event{font-weight:700;color:var(--maroon)}
+.cal-day.event::after{content:"";position:absolute;bottom:3px;left:50%;transform:translateX(-50%);width:5px;height:5px;border-radius:50%;background:var(--maroon)}
+.cal-legend{border-top:1px solid var(--sand-deep);padding:10px 14px;font-size:.8rem;color:var(--maroon);font-weight:600;display:flex;align-items:center;gap:8px;justify-content:center}
+.cal-dot{width:9px;height:9px;border-radius:50%;background:var(--maroon);display:inline-block;flex:0 0 auto}
+
 /* Partners */
 .partners{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;max-width:760px;margin:34px auto 0}
 .partner-card{background:#fff;border:1px solid var(--sand-deep);border-radius:var(--radius);padding:30px 28px;box-shadow:var(--shadow)}

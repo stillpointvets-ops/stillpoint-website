@@ -41,6 +41,19 @@
   <div class="wrap">
     <h2 class="center">Upcoming events</h2>
 
+    <div class="calendar" id="cal">
+      <div class="cal-head">
+        <button class="cal-nav" id="calPrev" aria-label="Previous month">&#8249;</button>
+        <div class="cal-title" id="calTitle">&nbsp;</div>
+        <button class="cal-nav" id="calNext" aria-label="Next month">&#8250;</button>
+      </div>
+      <div class="cal-grid cal-dow">
+        <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+      </div>
+      <div class="cal-grid" id="calDays"></div>
+      <div class="cal-legend"><span class="cal-dot"></span> Walk &amp; Talk &mdash; Saturdays, 10:00 AM</div>
+    </div>
+
     <div class="events">
       <article class="event-card">
         <div class="event-date"><span class="event-month">Every</span><span class="event-day">Sat</span></div>
@@ -114,6 +127,41 @@
     <div class="copyright">&copy; 2026 Stillpoint Veterans Foundation. &nbsp;501(c)(3) status pending.</div>
   </div>
 </footer>
+
+<script>
+(function(){
+  var titleEl=document.getElementById('calTitle'),daysEl=document.getElementById('calDays');
+  if(!titleEl||!daysEl)return;
+  var months=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  var today=new Date();
+  var view=new Date(today.getFullYear(),today.getMonth(),1);
+  function addCell(num,muted,dt){
+    var c=document.createElement('div');
+    c.className='cal-day'+(muted?' muted':'');
+    if(dt){
+      if(dt.getDay()===6)c.className+=' event';
+      if(dt.toDateString()===today.toDateString())c.className+=' today';
+    }
+    c.textContent=num;
+    daysEl.appendChild(c);
+  }
+  function render(){
+    titleEl.textContent=months[view.getMonth()]+' '+view.getFullYear();
+    daysEl.innerHTML='';
+    var y=view.getFullYear(),m=view.getMonth();
+    var startDow=new Date(y,m,1).getDay();
+    var daysInMonth=new Date(y,m+1,0).getDate();
+    var prevDays=new Date(y,m,0).getDate();
+    for(var i=startDow-1;i>=0;i--)addCell(prevDays-i,true,null);
+    for(var d=1;d<=daysInMonth;d++)addCell(d,false,new Date(y,m,d));
+    var trailing=(7-((startDow+daysInMonth)%7))%7;
+    for(var t=1;t<=trailing;t++)addCell(t,true,null);
+  }
+  document.getElementById('calPrev').addEventListener('click',function(){view.setMonth(view.getMonth()-1);render();});
+  document.getElementById('calNext').addEventListener('click',function(){view.setMonth(view.getMonth()+1);render();});
+  render();
+})();
+</script>
 
 </body>
 </html>
