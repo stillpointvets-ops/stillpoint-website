@@ -148,5 +148,53 @@
   </div>
 </footer>
 
+<div class="modal-overlay" id="signupModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="signupTitle">
+    <button class="modal-close" id="signupClose" aria-label="Close">&times;</button>
+    <img class="modal-logo" src="images/logo-emblem.png" alt="">
+    <h2 id="signupTitle" class="modal-title">Get Connected</h2>
+    <p class="modal-sub">Leave your first name and email, and we'll keep you in the loop on events, resources, and ways we can help.</p>
+    <form id="signupForm" action="https://formspree.io/f/xnjejylo" method="POST">
+      <input type="text" name="first_name" placeholder="First name" required autocomplete="given-name">
+      <input type="email" name="email" placeholder="Email address" required autocomplete="email">
+      <input type="hidden" name="_subject" value="New email sign-up (website pop-up)">
+      <input type="hidden" name="source" value="Website pop-up sign-up">
+      <button type="submit" class="btn">Get Connected</button>
+      <div class="modal-msg" id="signupMsg" hidden></div>
+    </form>
+  </div>
+</div>
+
+<script>
+(function(){
+  var KEY='spv_signup_v1';
+  var modal=document.getElementById('signupModal');
+  if(!modal||localStorage.getItem(KEY))return;
+  var form=document.getElementById('signupForm');
+  var msg=document.getElementById('signupMsg');
+  function openM(){modal.classList.add('open');modal.setAttribute('aria-hidden','false');}
+  function closeM(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');}
+  function dismiss(){try{localStorage.setItem(KEY,'1');}catch(e){}closeM();}
+  setTimeout(openM,2000);
+  document.getElementById('signupClose').addEventListener('click',dismiss);
+  modal.addEventListener('click',function(e){if(e.target===modal)dismiss();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&modal.classList.contains('open'))dismiss();});
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
+      .then(function(r){
+        if(r.ok){
+          var els=form.querySelectorAll('input[type=text],input[type=email],button');
+          for(var i=0;i<els.length;i++){els[i].style.display='none';}
+          msg.hidden=false;msg.textContent="Thank you — you're connected!";
+          try{localStorage.setItem(KEY,'1');}catch(e){}
+          setTimeout(closeM,2400);
+        }else{msg.hidden=false;msg.style.color='#A23D63';msg.textContent='Something went wrong — please try again.';}
+      })
+      .catch(function(){msg.hidden=false;msg.style.color='#A23D63';msg.textContent='Something went wrong — please try again.';});
+  });
+})();
+</script>
+
 </body>
 </html>
