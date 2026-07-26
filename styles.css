@@ -192,6 +192,8 @@ footer.site li{margin-bottom:7px}
 /* Disclaimer band */
 .disclaimer{background:var(--sand-deep);color:var(--ink);text-align:center;padding:16px 22px;font-size:.92rem}
 .disclaimer b{color:var(--maroon)}
+.med-disclaimer{background:var(--maroon);color:#000;text-align:center;padding:18px 22px;font-size:1.04rem;line-height:1.5}
+.med-disclaimer b{color:#000}
 
 /* Signup popup */
 .modal-overlay{position:fixed;inset:0;background:rgba(18,26,38,.55);display:none;align-items:center;justify-content:center;z-index:200;padding:20px}
