@@ -195,6 +195,26 @@ footer.site li{margin-bottom:7px}
 .med-disclaimer{background:var(--maroon);color:#fff;text-align:center;padding:18px 22px;font-size:1.04rem;line-height:1.5}
 .med-disclaimer b{color:#fff}
 
+/* Research / evidence page */
+.ev-note{background:#fff;border-left:4px solid var(--blue);padding:16px 20px;margin:0 0 8px;border-radius:8px;color:var(--muted);font-size:.95rem}
+.ev-note b{color:var(--ink)}
+.ev-legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin:10px 0 0;font-size:.85rem;color:var(--muted)}
+.ev-tag{display:inline-block;font-size:.64rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 10px;border-radius:50px;color:#fff;vertical-align:middle;margin-left:6px}
+.ev-strong{background:#2e7d54}
+.ev-growing{background:var(--blue)}
+.ev-emerging{background:#c07a2a}
+.ev-prelim{background:var(--muted)}
+.ev-item{background:#fff;border-radius:14px;padding:22px 24px;margin:16px 0;box-shadow:var(--shadow)}
+.ev-item h3{font-family:var(--font);font-weight:700;color:var(--blue);font-size:1.3rem;margin:0 0 6px;line-height:1.25}
+.ev-item .lead{margin:6px 0 12px;color:var(--ink);font-size:1rem}
+.ev-item h4{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--maroon);margin:14px 0 6px}
+.ev-links{list-style:none;padding:0;margin:0}
+.ev-links li{padding:6px 0 6px 24px;position:relative;border-bottom:1px solid var(--sand-deep);font-size:.95rem}
+.ev-links li:last-child{border-bottom:none}
+.ev-links li::before{content:"\2192";position:absolute;left:0;color:var(--blue);font-weight:700}
+.ev-links a{font-weight:600;color:var(--blue-deep)}
+.ev-src{display:block;font-size:.78rem;color:var(--muted);font-weight:400}
+
 /* Signup popup */
 .modal-overlay{position:fixed;inset:0;background:rgba(18,26,38,.55);display:none;align-items:center;justify-content:center;z-index:200;padding:20px}
 .modal-overlay.open{display:flex}
